@@ -2,7 +2,6 @@ var express = require('express');
 var fs = require('fs');
 
 var app = express.createServer(express.logger());
-var index = fs.readFileSync('index.html', 'utf-8', function(
 var cachedPage = fs.readFileSync('index.html', 'utf-8', function(err, data) {
   if (err) console.log('err: ', err);//TODO: throw it in a logfile
   return data;
